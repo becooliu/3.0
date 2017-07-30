@@ -1,0 +1,76 @@
+/* mixin */
+@mixin clearfix {
+    zoom :1;
+    &:after {
+        display: block;
+        content: "";
+        height: 0;
+        visibility: hidden;
+        clear: both;
+    }
+}
+
+@mixin list-resets {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+@mixin box-sizing {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+@mixin border-radius($radius : 4px) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+@mixin trans_1{
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin box-shadow-1{
+    -webkit-box-shadow: 3px 3px 10px lighten($gray-base, 86.75%), -3px -3px 10px lighten($gray-base, 86.75%);
+    -moz-box-shadow: 3px 3px 10px lighten($gray-base, 86.75%), -3px -3px 10px lighten($gray-base, 86.75%);
+    box-shadow: 3px 3px 10px lighten($gray-base, 86.75%), -3px -3px 10px lighten($gray-base, 86.75%);
+}
+
+@mixin box-shadow($horizontal: 3px, $vertical: 3px, $offset : 10px){
+    -webkit-box-shadow: $horizontal $vertical $offset lighten($gray-base, 86.75%) ;
+    -moz-box-shadow: $horizontal $vertical $offset lighten($gray-base, 86.75%);
+    box-shadow: $horizontal $vertical $offset lighten($gray-base, 86.75%);
+}
+
+@mixin text-overflow {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+}
+
+@mixin transparent-colors($attribute,$color,$background){
+	$percent: alpha($color) * 100%; /*获取颜色透明度值，并转换成百分比*/
+	$opaque: opacify($color,1); /*使颜色不透明*/
+	$solid-color: mix($opaque,$background,$percent);
+	#{$attribute}: $solid-color; /*设置不透明的颜色，为不支持rgba颜色的浏览器服务*/
+	#{$attribute}: $color;/*设置透明颜色，为支持rgba颜色的浏览器服务 */
+}
+@mixin text-center {
+	text-align: center;
+}
+/* caret 三角箭头 */
+@mixin caret-right($size : 10px , $bg-color : $gray-common) {
+	position: absolute;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-top: $size/2 solid transparent;
+	border-bottom: $size/2 solid transparent;
+	border-left: $size/2 solid $bg-color;
+}
+/* mixin end */

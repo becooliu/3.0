@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+    <title>信手建站 - 编辑页面</title>
+
+    <!--fontAwesome-->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <!--jQuery-->
+    <script src="js/jquery.1.10.2.min.js"></script>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+    <!--Bootstrap editable-->
+    <link rel="stylesheet" href="bootstrap3-editable-1.5.1/bootstrap3-editable/css/bootstrap-editable.css">
+    <script src="bootstrap3-editable-1.5.1/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+
+    <!--select2-->
+    <link rel="stylesheet" href="select2-master/dist/css/select2.min.css">
+    <script src="select2-master/dist/js/select2.min.js"></script>
+
+    <!--customer-->
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="javascript:void(0);">信手建站</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            243257686<span class="sr-only">(current)</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0);">用户信息</a></li>
+                            <li><a href="javascript:void(0);">会员中心</a></li>
+                            <li><a href="javascript:void(0);">退出</a></li>
+                        </ul>
+                        <!--<a href="javascript:void(0);"><i class="fa fa-user-circle-o" aria-hidden="true"></i>243257686<span class="sr-only">(current)</span></a>-->
+                    </li>
+                    <li><a href="javascript:void(0);">基础版<span class="expiration"><i class="fa fa-clock-o"></i>2018.05.31</span></a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">网站管理<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0);">网站1</a></li>
+                            <li><a href="javascript:void(0);">网站2</a></li>
+                            <li><a href="javascript:void(0);">网站3</a></li>
+                            <li><a href="javascript:void(0);">网站4</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">公众号管理<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0);">公众号一</a></li>
+                            <li><a href="javascript:void(0);">公众号二</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--<form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>-->
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-globe"></i>
+                            简体中文
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0);">繁体中文</a></li>
+                            <li><a href="javascript:void(0);">日语</a></li>
+                            <li><a href="javascript:void(0);">韩语</a></li>
+                            <li><a href="javascript:void(0);">越南语</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="javascript:void(0);">英语</a></li>
+                            <li><a href="javascript:void(0);">德语</a></li>
+                            <li><a href="javascript:void(0);">法语</a></li>
+                            <li><a href="javascript:void(0);">意大利语</a></li>
+                            <li><a href="javascript:void(0);">西班牙语</a></li>
+                            <li><a href="javascript:void(0);">荷兰语</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="login.html" class="login-info">
+                             <i class="fa fa-envelope"></i>
+                             <span class="badge badge-info">3333333333</span>
+                         </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                             <i class="fa fa-sign-out"></i>
+                             退出
+                         </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row  row-offcanvas row-offcanvas-right">
+            <div class="col-xs-12 col-sm-2 sidebar" id="sidebar">
+                <div class="nav nav-sidebar admin-sidebar">
+                    <h4>会员中心</h4>
+                    <div class="sidebar-box">
+                        <div class="sidebar-list-item active">
+                            <a href="edit.html" role="button" class="list-item-title">
+                                <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+                                <span>套餐升级</span>
+                            </a>
+                            <div class="list-group active">
+                                <a href="javascript:void(0);" class="list-group-item active"><i class="fa list-style-circle"></i><span>基础版</span></a>
+                                <a href="javascript:void(0);" class="list-group-item"><i class="fa list-style-circle"></i><span>专业版</span></a>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-list-item">
+                            <a href="javascript:void(0);" role="button" class="list-item-title">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                <span>员工管理</span>
+                            </a>
+                            <div class="list-group">
+                                <a href="javascript:void(0);" class="list-group-item"><i class="fa list-style-circle"></i><span>权限管理</span></a>
+                                <a href="javascript:void(0);" class="list-group-item"><i class="fa list-style-circle"></i><span>分组管理</span></a>
+                            </div>
+                        </div>
+                        <div class="sidebar-list-item">
+                            <a href="articles.html" role="button" class="list-item-title">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                <span>文章管理</span>
+                            </a>
+                            <div class="list-group active">
+                                <a href="articles.html" class="list-group-item"><i class="fa list-style-circle"></i><span>文章设置</span></a>
+                                <a href="javascript:void(0);" class="list-group-item"><i class="fa list-style-circle"></i><span>分组管理</span></a>
+                            </div>
+                        </div>
+                        <div class="sidebar-list-item">
+                            <a href="javascript:void(0);" role="button" class="list-item-title">
+                                <i class="fa fa-user-times" aria-hidden="true"></i>
+                                <span>权限管理</span>
+                            </a>
+                            <div class="list-group">
+                                <a href="javascript:void(0);" class="list-group-item"><i class="fa list-style-circle"></i><span>权限管理</span></a>
+                                <a href="javascript:void(0);" class="list-group-item"><i class="fa list-style-circle"></i><span>分组管理</span></a>
+                            </div>
+                        </div>
+                        <div class="sidebar-list-item">
+                            <a href="javascript:void(0);" role="button" class="list-item-title">
+                                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                                <span>支付设置</span>
+                            </a>
+                            <div class="list-group">
+                                <a href="javascript:void(0);" class="list-group-item"><i class="fa list-style-circle"></i><span>权限管理</span></a>
+                                <a href="javascript:void(0);" class="list-group-item"><i class="fa list-style-circle"></i><span>分组管理</span></a>
+                            </div>
+                        </div>
+                        <div class="sidebar-list-item">
+                            <a href="javascript:void(0);" role="button" class="list-item-title">
+                                <i class="fa fa-language" aria-hidden="true"></i>
+                                <span>语言设置</span>
+                            </a>
+                            <div class="list-group">
+                                <a href="javascript:void(0);" class="list-group-item"><i class="fa list-style-circle"></i><span>权限管理</span></a>
+                                <a href="javascript:void(0);" class="list-group-item"><i class="fa list-style-circle"></i><span>分组管理</span></a>
+                            </div>
+                        </div>
+                        <div class="sidebar-list-item">
+                            <a href="javascript:void(0);" role="button" class="list-item-title">
+                                <i class="fa fa-gear" aria-hidden="true"></i>
+                                <span>安全设置</span>
+                            </a>
+                            <div class="list-group">
+                                <a href="javascript:void(0);" class="list-group-item"><i class="fa list-style-circle"></i><span>权限管理</span></a>
+                                <a href="javascript:void(0);" class="list-group-item"><i class="fa list-style-circle"></i><span>分组管理</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+                                        套餐升级
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item active"><i class="fa list-style-circle"></i><span>基础版</span></a>
+                                    <a href="#" class="list-group-item"><i class="fa list-style-circle"></i><span>专业版</span></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+
+                <!--<div class="nav nav-sidebar admin-sidebar">
+                    <h4>会员中心</h4>
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+                                        套餐升级
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item active"><span class="list-style"></span>基础版</a>
+                                    <a href="#" class="list-group-item"><span class="list-style"></span>专业版</a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        <i class="fa fa-users" aria-hidden="true"></i>
+                                        员工管理
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item"><span class="list-style"></span>权限管理</a>
+                                    <a href="#" class="list-group-item"><span class="list-style"></span>分组管理</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        <i class="fa fa-user-times" aria-hidden="true"></i>
+                                        权限管理
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item"><span class="list-style"></span>权限管理</a>
+                                    <a href="#" class="list-group-item"><span class="list-style"></span>分组管理</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingFour">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false"
+                                        aria-controls="collapseFive">
+                                        <i class="fa fa-credit-card" aria-hidden="true"></i>
+                                        支付设置
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item"><span class="list-style"></span>权限管理</a>
+                                    <a href="#" class="list-group-item"><span class="list-style"></span>分组管理</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingFive">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false"
+                                        aria-controls="collapseSix">
+                                        <i class="fa fa-language" aria-hidden="true"></i>
+                                        语言设置
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item"><span class="list-style"></span>权限管理</a>
+                                    <a href="#" class="list-group-item"><span class="list-style"></span>分组管理</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingSix">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false"
+                                        aria-controls="collapseSeven">
+                                        <i class="fa fa-gear" aria-hidden="true"></i>
+                                        安全设置
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item"><span class="list-style"></span>修改密码</a>
+                                    <a href="#" class="list-group-item"><span class="list-style"></span>找回密码</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>-->
+            </div>
+            <div class="col-xs-12 col-sm-10 col-sm-offset-2 main-body">
+                <div class="cus-box">
+                    <ol class="cus-breadcrumb">
+                        <li><a href="javascript:void(0);">文章管理</a></li>
+                        <li class="active"><a href="javascript:void(0);">文章编辑</a></li>
+                    </ol>
+                </div>
+                <!--<div class="title-box">
+                    <h2 class="content-title">编辑页面</h2>
+                </div>-->
+                <div class="content-body">
+                    <p>如需要更多Bootstrap组件，请参考：<a href="http://v3.bootcss.com/components/"><code>http://v3.bootcss.com/components/</code></a></p>
+                    <p>如需要使用fontAwesome 字体图标，请参考：<a href="http://fontawesome.io/icons/"><code>http://fontawesome.io/icons/</code></a></p>
+                </div>
+                <div class="text-center">
+                    <div class="row">
+
+                        <form class="form-inline text-left">
+
+                            <div class="form-group">
+                                <label for="key-words">关键字：</label>
+                                <input type="email" class="form-control" id="key-words" placeholder="请输入邮箱/手机号/查询关键字">
+                                <input type="email" class="form-control" id="key-words" placeholder="请输入昵称">
+                            </div>
+                            <button class="btn btn-primary" type="button"><i class="fa fa-search"></i>搜索</button>
+                        </form>
+
+                    </div>
+
+                    <div class="row" style="margin: 1em 0px;">
+                        <div class="col-sm-12 col-md-6 text-left">
+                            <button class="btn btn-primary btn-sm"><i class="fa fa-plus"></i>添加</button>
+                            <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>删除</button>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <nav aria-label="..." class="text-right">
+                                <ul class="pagination pagination-sm" style="margin: 0;">
+                                    <li class="disabled">
+                                        <span>
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </span>
+                                    </li>
+                                    <li class="active">
+                                        <span>1 <span class="sr-only">(current)</span></span>
+                                    </li>
+                                    <li>
+                                        <span>2 <span class="sr-only"></span></span>
+                                    </li>
+                                    <li>
+                                        <span>3 <span class="sr-only"></span></span>
+                                    </li>
+                                    <li>
+                                        <span>4 <span class="sr-only"></span></span>
+                                    </li>
+                                    <li>
+                                        <span>5 <span class="sr-only"></span></span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <table class="table table-bordered table-hover table-condensed">
+                        <tr>
+                            <th><input type="checkbox" class="check-all" id="check-all"><label for="check-all"></label></th>
+                            <th>标题</th>
+                            <th>缩略图</th>
+                            <th>链接</th>
+                            <th>排序</th>
+                            <th>添加时间</th>
+                            <th>修改时间</th>
+                            <th>操作</th>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>This is the title about our product.</td>
+                            <td>
+                                <div class="img-box"><img src="images/face-logo.png" alt=""></div>
+                            </td>
+                            <td>http://jz.app100.cn</td>
+                            <td><a href="javascript:void(0);" class="data-sort"  data-name="group" data-source="{'M': 'male', 'F': 'female'}">2</a></td>
+                            <td>
+                                <div class="add-time">2017-05-26 09:00</div>
+                            </td>
+                            <td>
+                                <div class="update-time">2017-05-26 09:36</div>
+                            </td>
+                            <td>
+                                <div class="options">
+                                    <a href="javascript:void(0);" class="btn btn-default btn-sm"><i class="fa fa-play"></i>播放</a>
+                                    <a href="javascript:void(0);" class="btn btn-default btn-sm" data-toggle="modal" data-target="#edit-modal" data-name="条目"><i class="fa fa-edit"></i>编辑</a>
+                                    <a href="javascript:void(0);" class="btn btn-default btn-sm"><i class="fa fa-times"></i>删除</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>This is the title about our product.</td>
+                            <td>
+                                <div class="img-box"><img src="images/face-logo.png" alt=""></div>
+                            </td>
+                            <td>http://jz.app100.cn</td>
+                            <td><a href="javascript:void(0);" class="data-sort" data-type="select" data-name="group" data-source="{'M': 'male', 'F': 'female'}">2</a></td>
+                            <td>
+                                <div class="add-time">2017-05-26 09:00</div>
+                            </td>
+                            <td>
+                                <div class="update-time">2017-05-26 09:36</div>
+                            </td>
+                            <td>
+                                <div class="options">
+                                    <a href="javascript:void(0);" class="btn btn-default btn-sm"><i class="fa fa-play"></i>播放</a>
+                                    <a href="javascript:void(0);" class="btn btn-default btn-sm" data-toggle="modal" data-target="#edit-modal" data-name="条目"><i class="fa fa-edit"></i>编辑</a>
+                                    <a href="javascript:void(0);" class="btn btn-default btn-sm"><i class="fa fa-times"></i>删除</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="exampleModalLabel"></h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal">
+                                        <div class="form-group">
+                                            <label for="recipient-name" class=" col-sm-2 control-label">标题：</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" id="recipient-name">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-sm-2 control-label">链接：</label>
+                                            <div class="col-sm-10">
+                                                <textarea class="form-control" id="message-text"></textarea>
+                                            </div>
+                                        </div>
+                                        <!--<div class="form-group">
+                                            <label for="input-file" class="col-sm-2 control-label">图片：</label>
+                                            <div class="col-sm-10">
+                                                <input type="file" id="input-file" class="form-control" value="" />
+                                                <p class="help-block">Example block-level help text here.</p>
+                                            </div>
+                                        </div>-->
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-rotate-left"></i>取消</button>
+                                    <button type="button" class="btn btn-primary"><i class="fa fa-check-square-o"></i>确认</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="footer-box">
+                    <p>备案信息：京ICP 备12004543号 &copy;2010-2017 app100.cn 北京信手科技有限公司</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

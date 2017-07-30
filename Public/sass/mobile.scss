@@ -1,0 +1,112 @@
+/* common css */
+body {
+	font-family: "Microsoft Yahei",sans-serif;
+}
+a {
+	color: $text-color;
+	text-decoration: none;
+    &:hover,
+    &:focus {
+        color: lighten($text-color , 19.5%);
+        text-decoration: none;
+    }
+}
+
+.container {
+	width: auto;
+	max-width: $container-width;
+	margin: 0 auto;
+}
+.container-fluid {
+	width: 100%;
+}
+:before,
+:after {
+	@include box-sizing;
+}
+.row {
+	/*width: auto;
+	max-width: $container-width;
+	margin: 0 auto;
+	@include clearfix;*/
+    
+    &:before,
+	&:after {
+		display: table;
+		content: " ";
+    }
+	&:after {
+		clear: both;
+	}
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11, {
+	position: relative;
+	float: left;
+	padding: 15px;
+	min-height: 1px;
+}
+.col-1 {
+	width: 8.33333%;
+}
+.col-2 {
+	width: 16.66667%;
+}
+.col-3 {
+	width: 25%;
+}
+.col-4 {
+	width: 33.33333%;
+}
+.col-5 {
+	width: 41.66667%;
+}
+
+.col-6 {
+	width: 50%;
+}
+.col-7 {
+	width: 58.33333%;
+}
+.col-8 {
+	width: 66.66667%;
+}
+.col-9 {
+	width: 75%;
+}
+.col-10 {
+	width: 83.33333%;
+}
+.col-11 {
+	width: 91.66667%;
+}
+.col-12 {
+	width:100%
+}
+
+* {
+	@include box-sizing;
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+}
+.text {
+	padding: 4px;
+	p {
+		font-size: 1.4rem;
+		text-align: left;
+		text-indent: 2em;
+	}
+}

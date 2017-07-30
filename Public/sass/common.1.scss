@@ -1,0 +1,128 @@
+/* common style */
+* {
+	@include box-sizing;
+}
+.container {
+	width: $container-width;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.container-fluid {
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: $container-width;
+	>.row {
+		margin: 0;
+	}
+	>.row-static {
+		margin-left: auto;
+		margin-right: auto;
+		width:$container-width;
+	}
+}
+.row {
+	@include clearfix;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.container-fluid:before,
+.container-fluid:after,
+.container:before,
+.container:after,
+.row:before,
+.row:after {
+	display: table;
+	content: " ";
+}
+
+*:before,
+*:after {
+	@include box-sizing;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+	position: relative;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+	float: left;
+}
+
+.col-1 {
+	width: 8.33333%;
+}
+.col-2 {
+	width: 16.66667%;
+}
+.col-3 {
+	width: 25%;
+}
+.col-4 {
+	width: 33.33333%;
+}
+.col-5 {
+	width: 41.66667%;
+}
+
+.col-6 {
+	width: 50%;
+}
+.col-7 {
+	width: 58.33333%;
+}
+.col-8 {
+	width: 66.66667%;
+}
+.col-9 {
+	width: 75%;
+}
+.col-10 {
+	width: 83.33333%;
+}
+.col-11 {
+	width: 91.66667%;
+}
+.col-12 {
+	width:100%
+}
+
+
+body {
+	font-family: "Microsoft Yahei",sans-serif;
+}
+img {
+	width: auto;
+	max-width: 100%;
+}
+a {
+    color: $gray-common;
+}
+.text-center {
+	text-align: center;
+}
+.fixed {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	z-index: 100;
+}
+/* common style end */

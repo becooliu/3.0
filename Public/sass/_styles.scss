@@ -1,0 +1,49 @@
+$grid-gutter-width: 30px !default;
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-base:             #000 !default;
+$gray-darker:           lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:             lighten($gray-base, 20%) !default;   // #333
+$gray:                  lighten($gray-base, 33.5%) !default; // #555
+$gray-common:           lighten($gray-base, 40.1%) !default; // #666
+$gray-light:            lighten($gray-base, 46.7%) !default; // #777        #999 59.9%    #aaa 66.5% 
+$gray-lighter:          lighten($gray-base, 93.5%) !default; // #eee        80% #ccc  86.75% #ddd 85.5% #dadada
+
+$color:                 #555 !default;
+$color-darker:           darken($color, 20%) !default; // #222
+$color-dark:             darken($color, 2%) !default;   // #333
+$color-light:            lighten($color, 3%) !default; // #777 
+$color-lighter:          lighten($color, 60%) !default; // #eee
+$color-inverse:         #fff;
+
+$brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
+
+$font-size-base: 14px !default;
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+// special color
+$font-color: #666 !default;
+
+//** Background color for `<body>`.
+$body-bg:               #fff !default;
+//** Global text color on `<body>`.
+$text-color: $gray-dark !default;
+
+//** Global textual link color.
+$link-color:            $text-color !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%) !default;
+//**  Global textual link decoration.
+$link-decoration: none !default;
+//** Link hover decoration.
+$link-hover-decoration: none !default;

@@ -1,0 +1,586 @@
+$color-inverse : #fff;
+$gray-common : #666;
+$brand-color: #01abff;
+$brand-primary: #01abff;
+$brand-info: #67af22;
+
+$brand-danger: #cc3333; 
+$brand-warning: #ff902b;
+$red: #cc3333;
+$gutter : 15px;
+@import "../styles";
+a {
+  color: #666;
+  &:hover,
+  &:focus {
+      text-decoration: none;
+      color: $gray-common;
+  }
+}
+
+
+.navbar-inverse {
+    background-color: $brand-color;
+    border-color: $brand-color;
+}
+
+.navbar-inverse .navbar-brand {
+    color: $color-inverse;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: lighten($color-inverse, 13%);
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+    background-color: transparent;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
+    background-color: transparent;
+    color: lighten($color-inverse, 13%);
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: $color-inverse;
+    >.icon-bar {
+        background-color: $brand-color;
+    }
+}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: $color-inverse;
+}
+.navbar-inverse .navbar-toggle {
+    border-color: $color-inverse;
+}
+.navbar-toggle {
+    position: relative;
+    float: right;
+    margin-right: 15px;
+    padding: 9px 10px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.navbar-brand {
+    padding: 0 15px;
+    font-size: 24px;
+    line-height: 60px;
+    height: 60px;
+    cursor: default;
+}
+
+.navbar {
+    min-height: 60px;
+    line-height: 60px;
+    margin-bottom: 0px;
+}
+
+@media (min-width: 768px){
+    .navbar-nav>li>a {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+/*菜单内部*/
+.list-style-circle {
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    @include border-radius;
+}
+
+.navbar-nav .fa {
+    font-size: 16px;
+    margin: 0 5px;
+}
+.expiration {
+    display: inline-block;
+    padding: 0 8px;
+    margin: 0 5px;
+    background-color: #f15a24;
+    @include border-radius(10px);
+    >.fa {
+        margin: 0 5px;
+    }
+}
+
+
+/* sidebar */
+
+.sidebar-box {
+    >.sidebar-list-item {
+        .list-item-title {
+            display: block;
+            line-height: 36px;
+            font-size: 16px;
+            background: $color-inverse;
+            padding: 10px 15px;
+            /*padding-left: 15px;
+            padding-right: 15px;*/
+            >i.fa {
+                margin-right: 8px;
+                width: 17.1563px;
+            }
+        }
+        &.active {
+            > a {
+                color: $brand-color;
+            }
+            >.list-group.active {
+                display: block;
+            }
+        }
+        >.list-group {
+            margin-bottom: 0px;
+            display: none;
+            background: #f2f2f2;
+            border-left: 3px solid #f2f2f2;
+            &.active {
+                border-left: 3px solid $brand-color;
+            }
+            .list-group-item {
+                border-color: #f2f2f2;
+                background: #f2f2f2;
+                padding-left: 42px;
+                &.active{
+                    color: $color-inverse;
+                    border-color: $brand-color;
+                    background: $brand-color;
+                    .list-style-circle {
+                        background: $color-inverse;
+                    }
+                }
+                
+                &:first-child,
+                &:last-child {
+                    border-top-right-radius: 0;
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+                >.list-style-circle {
+                    margin-right: 8px;
+                    vertical-align: middle;
+                    background: $gray-common;
+                }
+            }
+        }
+    }
+}
+
+/*内容区*/
+/* media */
+.media {
+	width: 100%;
+	@include border-radius(4px);
+	.media-image {
+		@include boxsizing;
+		display: table-cell;
+		vertical-align: top;
+		width: 25%;
+		
+		text-align: center;
+		padding: 4px;
+		>img {
+			width: auto;
+			max-width: 100%;
+		}
+	}
+	.media-body {
+		padding: 4px 8px;
+		display: table-cell;
+		vertical-align: top;
+		width: 10000px;
+		overflow: hidden;
+		zoom: 1;
+        word-break: break-word;
+		>.title {
+			margin: 8px 0px;
+		}
+        >a {
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                color: $gray-common;
+            }
+        }
+	}
+}
+.login-info {
+    position: relative;
+    margin-right: 6px;
+}
+.badge-info {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    background: $red;
+    color: $color-inverse;
+    width: auto;
+    max-width: 42px;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.create-time,
+.operate {
+    text-align: left;
+}
+.create-time {
+    padding-top: 1.5em;
+    color: lighten($gray-base , 66.5%);
+}
+.cus-box {
+    margin-left: -30px;
+    margin-right: -15px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 30px;
+    border-bottom: 1px solid lighten($gray-base, 85.5%);
+
+    ol.cus-breadcrumb {
+        border-left: 4px solid $brand-color;
+        padding-left: 8px;
+        li {
+            display: inline-block;
+            font-size: 18px;
+            &:not(:first-child) {
+                &:before {
+                    content: '>';
+                    margin: 0 4px;
+                }
+            }
+            a {
+                color: #888;
+                font-size: 18px;
+            }
+            &.active{
+                a {
+                    cursor: default;
+                    color: #4d4d4d;
+                }
+            }
+        }
+    }
+}
+.title-box {
+    margin-left: -30px;
+    margin-right: -15px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 30px;
+
+    border-bottom: 1px solid lighten($gray-base, 85.5%);
+
+    .content-title {
+        border-left: 8px solid $brand-color;
+        padding-left: 8px;
+        &:after {
+            content: ">";
+            margin: 0 4px;
+        }
+        &:last-child {
+            content: '';
+        }
+        &.active {
+            color: $gray-common;
+        }
+    }
+}
+
+
+.content-body {
+    background-color: #f5f7fa;
+    padding: 1em;
+    margin-left: -1em;
+    margin-right: -1em;
+    .site-list {
+        padding: 1em;
+        margin-bottom: 1em;
+        border: 1px solid lighten($gray-base, 85.5%);
+        background-color: $color-inverse;
+        @include border-radius(4px);
+        @include clearfix;
+    }
+}
+.sidebar {
+    display: none;
+}
+.main-body {
+    margin-top: 61px;
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 61px;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-color: #f5f5f5;
+        border: 1px solid lighten($gray-base, 93.5%);
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+        color: lighten($gray-base, 93.5%);
+    }
+    .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
+        background-color: $color-inverse;
+    }
+    .media {
+        .media-image {
+            display: none;
+        }
+    }
+    
+
+}
+@media (min-width: 768px) and (max-width: 903px) {
+    .main-body {
+        margin-top: 121px;
+    }
+    .sidebar {
+        top: 121px;
+    }
+}
+.footer-box {
+    background-color: #f5f7fa;
+    padding: 15px 20px;
+    margin: 0 -15px;
+    border-top: 1px solid lighten($gray-base, 85.5%);
+}
+
+
+/*------ login ------*/
+
+.bg-section {
+    background-image: url(../images/bg-section0.jpg);
+    background-color: rgb(0, 160, 233);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    min-height: 480px;
+}
+
+.login-box {
+    padding: 1.17em;
+    margin: 3em 0px;
+    background: $color-inverse;
+    @include border-radius(4px);
+    @include boxshadow_1;
+
+    hr.divide {
+        margin-bottom: -29px;
+    }
+    .v-box {
+        text-align: center;
+    }
+    .pv {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        display: inline-block;
+        background-color: #fff;
+        padding: 0 1em;
+    }
+
+    .has-error .form-control {
+        border-color: #f20;
+    }
+    .has-warning .form-control {
+        border-color: #fa0;
+    }
+    .has-success .form-control {
+        border-color: #096;
+    }
+    .forget-password {
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    .btn-primary.btn-main {
+        background: #fa6400;
+        border: 1px solid #fa6400;
+        &.active {
+            background: #ea5e01;
+            border: 1px solid #ea5e01;
+            &:hover {
+                background: #ea5e01;
+                border: 1px solid #ea5e01;
+            }
+        }
+    }
+
+    .pt-lg {
+        padding-top: 15px !important;
+    }
+
+    .help-box {
+        text-align: center;
+        line-height: 40px;
+    }
+}
+
+.copy-right {
+    margin: 2em;
+}
+
+/*------ login end ------*/
+
+/*--------------------------------------各种组件样式列表---------------------------------------*/
+
+/*组件列表页*/
+.area-box {
+    border: 1px solid lighten($gray-base, 66.5%);
+    @include border-radius(4px);
+    padding: 20px;
+    margin: 1em;
+    >.component-title {
+        background: $gray-lighter;
+    }
+}
+.turn-to-page {
+    margin: 20px 0;
+    width: auto;
+    max-width: 140px;
+    margin-left: 5px;
+}
+@media (max-width: 441px) {
+    .turn-to-page {
+        margin-top: 0;
+        margin-bottom: 20px;
+        width: auto;
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
+
+.table {
+    tr,
+    th,
+    td {
+        text-align: center;
+    }
+    td{
+        img {
+            width: auto;
+            max-width: 100%;
+        }
+    }
+    .options {
+        .btn {
+            margin-top: 4px;
+        }
+    }
+}
+
+.btn {
+    .fa {
+        margin-right: 4px;
+    }
+}
+button[type=submit],
+button[type=reset] {
+    margin-right: 2em;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.atention {
+    text-align: left;
+    padding-left: 1em;
+    padding-right: 1em;
+    @include border-radius;
+    >.fa {
+        margin-right: 8px;
+    }
+}
+.btn-primary {
+    background-color: $brand-color;
+    border-color: lighten($brand-color , 6.5%);
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: darken($brand-color, 6.5%);
+        border-color: darken($brand-color , 13%);
+    }
+    
+}
+.btn-info {
+    background-color: $brand-info;
+    border-color: lighten($brand-info , 6.5%);
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: darken($brand-info, 6.5%);
+        border-color: darken($brand-info , 13%);
+    }
+}
+.bg-primary {
+    background-color: $brand-primary;
+    color: $color-inverse;
+}
+.bg-danger {
+    background-color: $brand-danger;
+    color: $color-inverse;
+}
+.bg-warning {
+    background-color: $brand-warning;
+    color: $color-inverse;
+}
+.bg-info {
+    background-color: $brand-info;
+    color: $color-inverse;
+}
+
+.bg-lg {
+    height: 40px;
+    line-height: 40px;
+}
+
+/* cus-tab */
+.cus-tab {
+    ul.tab-list {
+        border-bottom: 1px solid lighten($gray-base , 86.75%);
+        margin-bottom: $gutter;
+        @include list-resets;
+        @include clearfix;
+        >li {
+            float: left;
+            margin-bottom: -1px;
+            a {
+                display: block;
+                line-height: 1.17em;
+                padding: 10px 15px;
+                margin-right: 2px;
+                border: 1px solid transparent;
+                &:hover {
+                    background: lighten($gray-base , 86.75%);
+                }
+            }
+            &.active {
+                a {
+                    background-color: $color-inverse;
+                    border: 1px solid lighten($gray-base, 86.75%);
+                    border-bottom-color: transparent;
+                }
+            }
+        }
+    }
+    >.tab-content-box {
+        padding: 1em;
+        >.tab-panel {
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+    }
+}

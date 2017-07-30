@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* mixin */
+/* caret 三角箭头 */
+/* mixin end */
+/* common css */
+body { font-family: "Microsoft Yahei",sans-serif; }
+
+a { color: #333333; text-decoration: none; }
+a:hover, a:focus { color: #656565; text-decoration: none; }
+
+.container-fluid .row-static { margin-left: auto; margin-right: auto; }
+@media (min-width: 768px) { .container-fluid .row-static { width: 750px; } }
+@media (min-width: 992px) { .container-fluid .row-static { width: 970px; } }
+@media (min-width: 1200px) { .container-fluid .row-static { width: 1170px; } }

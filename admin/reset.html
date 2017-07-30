@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+    <title>信手建站 - 重置密码</title>
+
+    <!--fontAwesome-->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <!--jQuery-->
+    <script src="js/jquery.1.10.2.min.js"></script>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+    <!--customer-->
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <a href="http://jz.app100.cn"><img src="images/site.logo.png" alt="" class="logo"></a>
+            </div>
+        </div>
+    </div>
+    <section class="bg-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 pull-right">
+                    <div class="login-box">
+                        <div class="panel-heading text-center">
+                            <a href="#">
+                                <img src="images/face-logo.png" alt="Image" class="block-center img-rounded">
+                            </a>
+                        </div>
+                        <div class="panel-body">
+                            <hr class="divide" />
+                            <div class="v-box">
+                                <h4 class="text-center pv">密码重置</h4>
+                            </div>
+                            <form role="form" data-parsley-validate="" novalidate="" class="mb-lg" method="POST" action="{{ url('/login') }}">
+                                <div class="form-group has-feedback has-error">
+                                    <label for="signupInputCode" class="text-muted">邮箱/手机号</label>
+                                    <input id="account" type="account" name="account" placeholder="手机号/邮箱地址" value="" autocomplete="off" required class="form-control parsley-error">
+                                    <span class="fa fa-mobile form-control-feedback text-muted" style="font-size: 18px;"></span>
+                                </div>
+
+                                <div id="signupFieldCode" class="form-group has-feedback">
+                                    <label for="signupInputCode" class="text-muted">验证码</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="请输入验证码" aria-describedby="basic-addon2">
+                                        <span class="input-group-addon" id="basic-addon2">发送</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group has-feedback has-warning">
+                                    <label for="password" class="text-muted">密码</label>
+                                    <input id="password" type="password" placeholder="密码" name="password" value="" class="form-control parsley-error">
+                                    <span class="fa fa-lock form-control-feedback text-muted"></span>
+                                </div>
+                                
+                                <!--<div class="clearfix">
+                                    <div class="checkbox c-checkbox pull-left mt0">
+                                        <label>
+                                            <input type="checkbox" value="" name="remember">
+                                            <span class="fa fa-check"></span>记住登录</label>
+                                    </div>
+                                    <div class="pull-right forget-password"><a href="reset.html" class="text-muted">忘记密码?</a></div>
+                                </div>-->
+                                <button type="submit" class="btn btn-block btn-primary btn-main mt-lg">重置</button>
+                                <!--<div class="text-center">
+                                    <div class="forget-password">已有帐号?<a href="login.html" class="text-muted">登录</a></div>
+                                </div>-->
+                            </form>
+                            <div class="help-box">
+                                <span class="pt-lg text-center">已有账号?</span>
+                                <a href="login.html" class="v-regist">立即登录</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="copy-right text-center">
+                        <p>Copyright &copy; <a href="http://www.app100.cn">app100.cn</a> 2010-2017</p>
+                        <p>京ICP备12004543号</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

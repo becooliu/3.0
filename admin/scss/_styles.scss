@@ -1,0 +1,176 @@
+$grid-gutter-width: 30px !default;
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-base:             #000 !default;
+$gray-darker:           lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:             lighten($gray-base, 20%) !default;   // #333
+$gray:                  lighten($gray-base, 33.5%) !default; // #555
+$gray-common:           lighten($gray-base, 40.1%) !default; // #666
+$gray-light:            lighten($gray-base, 46.7%) !default; // #777        66.5% #aaa
+$gray-lighter:          lighten($gray-base, 93.5%) !default; // #eee        80% #ccc  86.75% #ddd 85.5% #dadada
+
+$color:                 #555 !default;
+$color-darker:           darken($color, 20%) !default; // #222
+$color-dark:             darken($color, 2%) !default;   // #333
+$color-light:            lighten($color, 3%) !default; // #777 
+$color-lighter:          lighten($color, 60%) !default; // #eee
+$color-inverse:         #fff;
+
+$brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
+
+$font-size-base: 14px !default;
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+// special color
+$font-color: #666 !default;
+
+//** Background color for `<body>`.
+$body-bg:               #fff !default;
+//** Global text color on `<body>`.
+$text-color: $gray-dark !default;
+
+//** Global textual link color.
+$link-color:            $text-color !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%) !default;
+//**  Global textual link decoration.
+$link-decoration: none !default;
+//** Link hover decoration.
+$link-hover-decoration: none !default;
+
+@mixin articles {
+
+    > .article-list {
+        @include list-resets;
+        > .item {
+            @include clearfix;
+            > .created {
+                float: left;
+                width: 16%;
+                min-width: 74px;
+                font-size: 14px;
+                height: 80px;
+                line-height: 26px;
+                text-align: center;
+                background: $color;
+                color: #ffffff;
+
+                > .month-day {
+                    margin-top: 14px;
+                }
+
+                > .divider {
+                    width: 43px;
+                    margin: 0 auto;
+                    height: 1px;
+                    background: #ffffff;
+                }
+
+                > .year {
+                    font-size: 16px;
+                }
+                
+            }
+
+            > .content {
+                float: left;
+                width: 80%;
+                padding-left: 28px;
+
+                .title {
+                    margin: 0;
+                    line-height: 30px;
+                    font-size: 18px;
+                    color: #414141;
+                    max-width: 100%;
+                    overflow: hidden;
+                    -moz-text-overflow: ellipsis;
+                    -ms-text-overflow: ellipsis;
+                    text-overflow: ellipsis;
+                }
+
+                .summary {
+                    height: 40px;
+                    overflow: hidden;
+
+                    p {
+                        color: #888888;
+                        font-size: 12px;
+                        line-height: 20px;
+                        margin: 0;
+                    }
+                }
+            }
+            + .item {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@mixin clearfix {
+    zoom: 1;
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+    }
+}
+
+@mixin list-resets {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+//CSS3 属性
+@mixin trans_1{
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin boxshadow_1{
+    -webkit-box-shadow: 3px 3px 10px lighten($gray-base, 86.75%), -3px -3px 10px lighten($gray-base, 86.75%);
+    -moz-box-shadow: 3px 3px 10px lighten($gray-base, 86.75%), -3px -3px 10px lighten($gray-base, 86.75%);
+    box-shadow: 3px 3px 10px lighten($gray-base, 86.75%), -3px -3px 10px lighten($gray-base, 86.75%);
+}
+@mixin boxsizing{
+    -webkit-moz-box-sizing: border-box;
+    -moz-moz-box-sizing: border-box;
+    -ms-moz-box-sizing: border-box;
+    -o-moz-box-sizing: border-box;
+    moz-box-sizing: border-box;
+}
+@mixin textoverflow{
+    display: block;
+    overflow: hidden;
+    -moz-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@mixin border-radius($radius : 4px) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin boxshadow($horizontal: 3px, $vertical: 3px, $offset : 10px){
+    -webkit-box-shadow: $horizontal $vertical $offset lighten($gray-base, 86.75%) ;
+    -moz-box-shadow: $horizontal $vertical $offset lighten($gray-base, 86.75%);
+    box-shadow: $horizontal $vertical $offset lighten($gray-base, 86.75%);
+}

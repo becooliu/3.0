@@ -1,0 +1,686 @@
+/*@import '_styles.scss';*/
+@import 'common.scss';
+
+.header {
+	display: table;
+	width: 100%;
+
+	.logo {
+		display: table-cell;
+		padding: 5px;
+		>img {
+			width: auto;
+			max-width: 100%;
+		}
+	}
+}
+/*.navbar-inverse {
+    background-color: $color-inverse;
+    border-color: $color-inverse;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.navbar-inverse .navbar-brand {
+    color: $color-inverse;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: $gray-common;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+    background-color: transparent;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
+    background-color: transparent;
+    color: $text-color;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: $text-color;
+    >.icon-bar {
+        background-color: $brand-color;
+    }
+}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: $color-inverse;
+}
+.navbar-inverse .navbar-toggle {
+    border-color: $color-inverse;
+}*/
+/*.navbar-toggle {
+    position: relative;
+    float: right;
+    margin-right: 15px;
+    padding: 9px 10px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}*/
+
+.navbar-brand {
+    padding: 0 15px;
+    font-size: 24px;
+    line-height: 60px;
+    height: 60px;
+    cursor: default;
+	text-align: center;
+    >img {
+        height: auto;
+        max-height: 100%;
+    }
+}
+
+.navbar {
+    min-height: 60px;
+    line-height: 60px;
+    margin-bottom: 0px;
+    -webkit-border-radius: 0px important;
+    -moz-border-radius: 0px important;
+    border-radius: 0px important;
+}
+.nav {
+	&.navbar-nav {
+		li {
+			a {
+				color: $gray-common;
+				&:hover {
+					background-color: transparent;
+					color: $gray-dark;
+				}
+			}
+			&.active {
+				a {
+					color: $gray-dark;
+					&:hover,
+					&:focus {
+						color: $gray-dark;
+					}
+				}
+			}
+			&.open {
+				a {
+					background-color: transparent;
+				}
+			}
+		}
+	}
+}
+/*.nav.navbar-nav li.active a {
+	color: $gray-dark;
+}*/
+.navbar-toggle {
+	background-color: lighten($gray-base , 59.9%);
+	margin-top: 10px;
+	.icon-bar {
+		background-color: $color-inverse;
+	}
+}
+
+@media (min-width: 768px){
+    .navbar {
+        @include border-radius(0px);
+    }
+    .navbar-nav>li>a {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.content {
+	img {
+		width: auto;
+		max-width: 100%;
+	}
+}
+
+/* 区域标题 */
+/* 区域标题 */
+.block-title {
+	display: block;
+	position: relative;
+	width: 100%;
+	text-align: left;
+	color: $gray-common;
+	>.title {
+		font-size: 16px;
+	}
+	>span {
+		display: none;
+	}
+	>p {
+		font-size: 14px;
+		margin-top: 0;
+	}
+	
+}
+
+/* 图片轮播 */
+.carousel {
+	position: relative;
+	/*min-width: $container-width;*/ /*-----------响应式去掉此行即可-----------*/
+	.content {
+		position: relative;
+		> * {
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: none;
+			&.active {
+				position: relative;
+				display: block;
+			}
+		}
+		.carousel-item {
+			.text {
+				text-align: center;
+				position: absolute;
+				top: 20%;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				text-align: center;
+				width: 100%;
+				>h1 {
+					font-size: 3.5em;
+				}
+				>h2 {
+					font-size: 3em;
+				}
+				>h3 {
+					font-size: 2.5em;
+				}
+				> p,
+				span,
+				em, {
+					font-size: 2em;
+				}
+				>* {
+					color: $color-inverse;
+				}
+			}
+		}
+	}
+
+	> .control{
+        position: absolute;
+        display: block !important;
+        width: 48px;
+        height: 60px;
+        line-height: 60px;
+        top: 50%;
+        margin-top: -30px;
+        background: rgba(255, 255, 255, .3);
+        font-size: 36px;
+        font-weight: 400;
+        text-align: center;
+        color: #ddd;
+        @include border-radius(6px);
+
+        &:hover {
+            background: rgba(255, 255, 255, .6);
+            color: $color-inverse;
+            cursor: pointer;
+        }
+
+        &.prev {
+            left: 1em;
+        }
+
+        &.next {
+            right: 1em;
+        }
+    }
+
+	> .indicators{
+		$orange : #ff9900;
+        @include list-resets;
+        position: absolute;
+
+        bottom: 1em;
+        left: 50%;
+
+        > li {
+            display: block;
+            float: left;
+            margin: 0 4px;
+            cursor: pointer;
+            height: 12px;
+            width: 12px;
+            background-color: $color-inverse;
+            @include border-radius(50%);
+
+            &.active {
+                background-color: mix($orange, $color-inverse, 90%);
+            }
+
+            &:hover {
+                background-color: $orange;
+            }
+        }
+    }
+}
+
+.carousel-liner {
+	position: relative;
+	/*min-width: $container-width;*/ /*-----------响应式去掉此行即可-----------*/
+	.content {
+		position: relative;
+		> * {
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: none;
+			&.active {
+				position: relative;
+				display: block;
+			}
+		}
+		.carousel-item {
+			.text {
+				text-align: center;
+				position: absolute;
+				top: 20%;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				text-align: center;
+				width: 100%;
+				>h1 {
+					font-size: 3.5em;
+				}
+				>h2 {
+					font-size: 3em;
+				}
+				>h3 {
+					font-size: 2.5em;
+				}
+				> p,
+				span,
+				em, {
+					font-size: 2em;
+				}
+				>* {
+					color: $color-inverse;
+				}
+			}
+		}
+	}
+
+	> .indicators{
+        @include list-resets;
+		@include clearfix;
+        position: relative;
+		text-align: center;
+		padding: 1em 0px;
+
+        > li {
+            display: inline-block;
+            margin: 0 4px;
+            cursor: pointer;
+            height: 6px;
+            width: 30px;
+            background-color: lighten($gray-common , 27%);
+
+            &.active {
+                background-color: mix($brand-color, $color-inverse, 60%);
+            }
+
+            &:hover {
+                background-color: $brand-color;
+            }
+        }
+    }
+}
+
+/* 图片轮播 end */
+
+/* cus-tab */
+.cus-tab {
+    ul.tab-list {
+        border-bottom: 1px solid lighten($gray-base , 86.75%);
+        margin-bottom: $gutter;
+        @include list-resets;
+        @include clearfix;
+        >li {
+            float: left;
+            margin-bottom: -1px;
+            a {
+                display: block;
+                line-height: 1.17em;
+                padding: 10px 15px;
+                margin-right: 2px;
+                border: 1px solid transparent;
+                &:hover {
+                    background: lighten($gray-base , 86.75%);
+                }
+            }
+            &.active {
+                a {
+                    background-color: $color-inverse;
+                    border: 1px solid lighten($gray-base, 86.75%);
+                    border-bottom-color: transparent;
+                }
+            }
+        }
+    }
+    >.tab-content-box {
+        padding: 1em;
+        >.tab-panel {
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+    }
+	&.tab-horizontal {
+		@include clearfix;
+		ul.tab-list {
+			display: inline-block;
+			@include list-resets;
+			width: 15%;
+			float: left;
+			border: none;
+			>li {
+				float: none;
+				margin-bottom: 0;
+				&.active {
+					a {
+						border: none;
+						color: $gray-base;
+					}
+				}
+				a {
+					color: $gray-common;
+					border: none;
+					font-size: 16px;
+				}
+			}
+		}
+		>.tab-content-box {
+			float: left;
+			width: 85%;
+		}
+	}
+}
+/* cus-tab end */
+
+/* 图文模块 */
+.img-text {
+	&.img-text-half {
+		>.img-text-image {
+			display: table-cell;
+			width: 50%;
+		}
+		>.img-text-body {
+			display: table-cell;
+			width:10000px;
+			overflow: hidden;
+			zoom: 1;
+			vertical-align: top;
+			background: $brand-color;
+			padding: 2em;
+			.img-text-heading,
+			.img-text-desc {
+				color: $color-inverse;
+			}
+			.img-text-heading {
+				text-align: center;
+
+			}
+			.img-text-desc {
+				line-height: 24px;
+			}
+		}
+	}
+}
+
+
+
+/* cus-thumbnail */
+.cus-thumbnail {
+	@include box-sizing;
+	@include border-radius(4px);
+	border: 1px solid #ddd;
+	background-color: $color-inverse;
+	padding: 4px;
+	margin: 8px 0px;
+	.img {
+		text-align: center;
+		border-bottom: 1px solid #ddd;
+		padding-bottom: 1em;
+		margin-bottom: 1em;
+		img {
+			width: auto;
+			max-width: 100%;
+			vertical-align: middle;
+		}
+	}
+	.content {
+		>a {
+			display: block;
+			>.title {
+				text-align: center;
+				h3 {
+					margin-top: 8px;
+					margin-bottom: 8px;
+				}
+			}
+			.desc {
+				text-align: left;
+				padding: 8px;
+			}
+		}
+	}
+}
+
+.pagination {
+	>li {
+		cursor: pointer;
+		&.disabled {
+			cursor: not-allowed;
+		}
+		&:hover,
+		&:active,
+		&focus, {
+			background-color: lighten($brand-color, 27%);
+			border-color: lighten($brand-color , 27%);
+		}
+		>span {
+			color: $brand-color;
+		}
+	}
+	>.active {
+		>span {
+			background-color: $brand-color;
+			border-color: $brand-color;
+		}
+	}
+	
+}
+
+.article {
+	img + p {
+		margin-top: 2em;
+		
+	}
+	&.article-vertical {
+		width: 100%;
+		padding-bottom: 1em;
+		margin-bottom: 1em;
+		border-bottom: 1px solid lighten($gray-common , 30%);
+		>.article-image {
+			display: table-cell;
+			min-width: 220px;
+			text-align: center;
+			img {
+				width: auto;
+				max-width: 100%;
+			}
+		}
+		>.article-body {
+			width: 10000px;
+			overflow: hidden;
+			zoom: 1;
+			display: table-cell;
+			vertical-align: top;
+			padding: 0 1em;
+			.title {
+				font-size: 1.5em;
+				margin-top: 0;
+			}
+			.sub-title {
+				@include text-overflow;
+			}
+		}
+	}
+}
+
+/* gallery */
+.gallery {
+	&.gallery-3 {
+		@include clearfix;
+		@include box-sizing;
+		.gallery-item {
+			float: left;
+			width: 33.3333%;
+			text-align: center;
+			padding: 4px;
+			>img {
+				width: auto;
+				max-width: 100%;
+				vertical-align: middle;
+			}
+			>p.name {
+				text-align: center;
+				color: $color;
+			}
+		}
+		>.gallery-mask {
+			display: none;
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			@include transparent-colors(background, rgba(#000,0.3), gray);
+			&.active {
+				display: block;
+				z-index: 2;
+			}
+		}
+		>.gallery-show {
+			display: none;
+			z-index: 2;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			text-align: center;
+			padding-top: 4px;
+			padding-bottom: 4px;
+			background: $color-inverse;
+			@include border-radius(4px);
+
+			&.active {
+				display: block;
+			}
+			img {
+				width: auto;
+				max-width: 100%;
+				vertical-align: middle
+			}
+			>p.name {
+				text-align: center;
+				color: $color;
+			}
+		
+			.control {
+				position: absolute;
+				display: inline-block;
+				top: 50%;
+				margin-top: -1.5em;
+				padding: 0 8px;
+				height: 3em;
+				line-height: 3em;
+				@include border-radius(4px);
+				@include transparent-colors(background, rgba(#fff,0.3), #fff);
+				color: $color-inverse;
+				font-size: 2em;
+				font-weight: bold;
+				cursor: pointer;
+				&:hover {
+					color: lighten($gray-common, 13%);
+					@include transparent-colors(background, rgba(#fff,0.7), #fff);
+				}
+				&.prev {
+					left:1.5em;
+				}
+				&.next {
+					right: 1.5em;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 768px) {
+	.gallery {
+		&.gallery-3 {
+
+			.gallery-show {
+				.control {
+					padding: 0 4px;
+					height: 2em;
+					line-height: 2em;
+					margin-top: -1.5em;
+					&.prev {
+						left: 4px;
+					}
+					&.next {
+						right: 4px;
+
+					}
+				}
+			}
+		}
+
+	}
+}
+
+/* 高德地图 */
+#amap {
+	height: 360px;
+	width: 100%;
+}
+
+/* footer */
+
+.contact-box {
+	line-height: 40px;
+	padding: 1em 0px;
+	.company-name {
+		color: #888;
+	}
+	.contact {
+		margin-right: 10px;
+		color: #888;
+	}
+}
+.copy-right {
+	margin: 1em auto;
+	padding: 1em 0px;
+	text-align: center;
+	border-top: 1px solid #ccc;
+	span {
+		color: #999
+	}
+}
+
+.image {
+	>img {
+		width: auto;
+		max-width: 100%;
+		border: none;
+	}
+}

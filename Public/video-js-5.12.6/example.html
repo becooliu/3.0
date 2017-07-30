@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Video.js | HTML5 Video Player</title>
+    <meta charset="UTF-8">
+    <link href="./video-js.css" rel="stylesheet">
+    <script src="./ie8/videojs-ie8.js"></script>
+    <script src="./video.js"></script>
+    <script src="./lang/zh-CN.js"></script>
+    <script>
+        videojs.options.flash.swf = './video-js.swf';
+    </script>
+</head>
+
+<body style="margin: 0px;">
+    <video id="player" class="video-js vjs-default-skin" style="position: absolute; width:100%; height:100%;" poster="./oceans.png"
+        data-setup='{
+            "autoplay": true,
+            "loop": true,
+            "controls": true,
+            "preload": "none",
+            "language": "zh-CN"
+        }'>
+        <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a web browser that
+            <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+    </video>
+    
+    <script>
+        var player = videojs('player');
+        player.src('./oceans.mp4');
+    </script>
+</body>
+</html>
